@@ -1,0 +1,19 @@
+** Js (Dynamically typed - no need to define data types) 
+
+** let and const (must to define variables)
+
+** Both for..of and for..in statements iterate over lists; the values iterated on are different though, for..in returns a list of keys on the object 
+being iterated, whereas for..of returns a list of values of the numeric properties of the object being iterated.
+
+** == in JavaScript is used for comparing two variables, but it ignores the datatype of variable. === is used for comparing two variables, but this 
+operator also checks datatype and compares two values. Checks the equality of two operands without considering their type. Compares equality of 
+two operands with their types.
+
+** A callback is a function passed as an argument to another function.
+
+** One such technique is using higher order functions. Higher order functions are functions that take one or more functions as arguments, or return 
+a function as their result.
+arr.forEach((num) => {console.log(num*num);})  This one is HOF (forEach taking another function as input).
+
+** The window object represents open window in the browser . It's not a JavaScript object it's browser's object which browser creates automatically
+for us . It's a global object .

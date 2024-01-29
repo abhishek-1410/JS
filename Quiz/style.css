@@ -1,0 +1,62 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background: linear-gradient(135deg,rgb(41, 33, 33),rgb(41, 133, 61));
+}
+
+.quiz{
+    background-color: white;
+    width: 30%;
+    margin: 20vmin auto ;
+    padding: 20px 20px 30px 20px;
+    border-radius: 20px;
+}
+.quiz h2{
+    font-size: 18px;
+}
+.btn{
+    width: 100%;
+    text-align: left;
+    height: 40px;
+    margin: 15px 0 0px 0;
+    padding: 10px 0 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    transition: all 0.3s;
+    background-color: white;
+}
+.btn:hover:not([disabled]){
+    background-color: #222;
+    color: #fff
+}
+.optionCorrect{
+    background-color: rgb(97, 179, 105);
+}
+.optionWrong{
+    background-color: rgb(216, 58, 58);
+}
+
+.nextBtn{
+    display: block;
+    font-size: 16px;
+    margin: 20px auto 0px;
+    padding: 10px 45px 10px 45px;
+    border-radius: 8px;
+    background-color: rgb(14, 14, 55);
+    color: white;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.cursorChange{
+    cursor: no-drop;
+}
+.removeHover{
+    background-color: inherit;
+}

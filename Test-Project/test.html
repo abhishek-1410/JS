@@ -1,0 +1,121 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations Animation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 2;
+      position: relative;
+    }
+
+    #congratulationsText {
+      display: none;
+      font-size: 24px;
+      font-weight: bold;
+      color: #4CAF50;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button onclick="showCongratulations()">Press me</button>
+  <p id="congratulationsText">Congratulations!</p>
+</div>
+
+<script>
+  function showCongratulations() {
+    document.body.classList.add('blur');
+    document.getElementById('congratulationsText').style.display = 'block';
+    setTimeout(function () {
+      document.getElementById('congratulationsText').style.opacity = '1';
+    }, 100);
+  }
+</script>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Div</title>
+  <style>
+    #movingDiv {
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      position: absolute;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="movingDiv">Move cursor near me!</div>
+
+<script>
+  var div = document.getElementById('movingDiv');
+
+  document.addEventListener('mousemove', function (event) {
+    var cursorX = event.clientX;
+    var cursorY = event.clientY;
+
+    var divRect = div.getBoundingClientRect();
+    var divX = divRect.left + divRect.width / 2;
+    var divY = divRect.top + divRect.height / 2;
+
+    var distance = Math.sqrt(Math.pow(cursorX - divX, 2) + Math.pow(cursorY - divY, 2));
+
+    if (distance < 100) { // Adjust the distance threshold as needed
+      moveDiv();
+    }
+  });
+
+  function getRandomPosition() {
+    var screenWidth = window.innerWidth - div.offsetWidth;
+    var screenHeight = window.innerHeight - div.offsetHeight;
+    var randomX = Math.floor(Math.random() * screenWidth);
+    var randomY = Math.floor(Math.random() * screenHeight);
+    return { x: randomX, y: randomY };
+  }
+
+  function moveDiv() {
+    var newPosition = getRandomPosition();
+    div.style.left = newPosition.x + 'px';
+    div.style.top = newPosition.y + 'px';
+  }
+</script>
+</body>
+</html>

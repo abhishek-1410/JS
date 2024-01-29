@@ -1,0 +1,67 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(25, 25, 46);
+}
+
+.container{
+    height: 60vmin;
+    width: 30%;
+    margin: 130px 0px 0px 400px;
+}
+
+.container h1{
+    font-size: 50px;
+    color: white;
+}
+
+.container h1 span{
+
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+}
+.passBox{
+    height: 40px;
+    width: auto;
+    background-color: white;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+#password{
+    font-size: 25px;
+    border: none;
+    outline: none;
+}
+
+.copiedText{
+    background-color: rgb(47, 192, 237);
+}
+
+.copyBtn{
+    width: 22px;
+    font-size: 20px;
+}
+
+.passGenBtn{
+    width: 320px;
+    height: 60px;
+    border-radius: 6px;
+    margin-top: 60px;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    background-color: #019f55;
+    justify-content:center ;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+
+}
