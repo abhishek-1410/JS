@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to left,rgb(170, 170, 247),rgb(72, 106, 72));
+}
+
+.card{
+    margin: 150px auto;
+    background-color: white;
+    padding: 30px 40px 40px 40px;
+    width: 450px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#input{
+    border: 1px solid gray;
+    width: 90%;
+    padding: 15px 20px 15px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 30px 0px 30px 0px;
+    outline: none;
+}
+
+#btn{
+    padding: 18px 35px 18px 35px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(81, 192, 81);
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.6);
+    transition: box-shadow .05s;
+}
+#btn:active{
+    box-shadow: none;
+}
+
+.qr img{
+    margin-bottom: 30px;
+}
