@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toast Notification</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="buttons">
+      <button onclick="showToast(success_msg)">Success</button>
+      <button onclick="showToast(error_msg)">Error</button>
+      <button onclick="showToast(invalid_msg)">Invalid</button>
+    </div>
+
+    <div class="toast-box"></div>
+
+    <script>
+      let toast_box = document.querySelector(".toast-box");
+      let success_msg =
+        " <i class='bx bxs-check-circle'></i> Successfully Submitted";
+      let error_msg = " <i class='bx bxs-x-circle'></i> Please fix the error!";
+      let invalid_msg =
+        " <i class='bx bxs-message-rounded-error'></i> Invalid input, check again";
+
+      function showToast(value) {
+        let toast = document.createElement("div");
+        toast.appendChild;
+        toast.classList.add("toast");
+        toast.innerHTML = value;
+        toast_box.appendChild(toast);
+
+        if (value.includes("error!")) {
+          toast.classList.add("error");
+        } else if (value.includes("Invalid")) {
+          toast.classList.add("invalid");
+        }
+
+        setTimeout(() => {
+          toast.remove();
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
